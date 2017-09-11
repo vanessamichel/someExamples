@@ -1,0 +1,45 @@
+---
+title: "someExamples"
+author: "Dr K"
+date: "September 11, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(tigerstats)
+data(m111surveyfa12)
+data(imagpop)
+```
+
+## look at the survey and imagepop
+
+
+```{r }
+View(m111surveyfa13)
+View(imagpop)
+```
+
+## explore kkardashtemp in imagepop
+
+You can also embed plots, for example:
+
+```{r }
+plot(imagpop$kkardashtemp)
+hist(imagpop$kkardashtemp)
+plot(density(imagpop$kkardashtemp))
+```
+
+## Try taking means of samples of size 2, size 3 and size 4 and look at the shapes of their distributions.
+
+
+## Here is what you get for samples of size 2
+
+
+```{r}
+size2means=numeric()
+for (i in 1:1000){
+size2means[i] <-  mean(sample(imagpop$kkardashtemp,size=2))
+}
+plot(density(size2means))
+```
