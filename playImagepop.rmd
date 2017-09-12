@@ -54,10 +54,30 @@ size3means[i] <-  mean(sample(imagpop$kkardashtemp,size=3))
 }
 plot(density(size3means))
 ```
+## samples of size 7
+```{r}
+size7means=numeric()
+for (i in 1:1000){
+size7means[i] <-  mean(sample(imagpop$kkardashtemp,size=7))
+}
+plot(density(size7means))
+```
 
+```{r}
+size30means=numeric()
+for (i in 1:1000){
+size30means[i] <-  mean(sample(imagpop$kkardashtemp,size=30))
+}
+plot(density(size30means))
+```
 
-
-
+```{r}
+size200means=numeric()
+for (i in 1:1000){
+size200means[i] <-  mean(sample(imagpop$kkardashtemp,size=200))
+}
+plot(density(size200means))
+```
 
 
 
