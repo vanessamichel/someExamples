@@ -36,6 +36,7 @@ plot(density(imagpop$kkardashtemp))
 ## Here is what you get for samples of size 2
 
 
+
 ```{r}
 size2means=numeric()
 for (i in 1:1000){
@@ -43,3 +44,21 @@ size2means[i] <-  mean(sample(imagpop$kkardashtemp,size=2))
 }
 plot(density(size2means))
 ```
+## samples of size 3
+
+
+```{r}
+size3means=numeric()
+for (i in 1:1000){
+size3means[i] <-  mean(sample(imagpop$kkardashtemp,size=3))
+}
+plot(density(size3means))
+```
+
+
+
+
+
+
+
+
